@@ -32,7 +32,7 @@ const Header = () => {
       <div className="container mx-auto h-full flex items-center justify-between">
         <Link href="">
           {/* logo dosent work */}
-          <Image src={"/public/logo.jpg"} width={117} height={55} alt="" />
+          <Image src="/logo.jpg" width={117} height={55} alt="Logo" />
         </Link>
         {/* mobile */}
         <MobileNav
@@ -43,14 +43,25 @@ const Header = () => {
           } flex flex-col text-center gap-8 fixed bg-primary-200 w-full left-0 text-base uppercase font-medium text-white transition-all xl:hidden`}
         />
         {/* desktop */}
-        <Navbar containerStyles="text-white flex gap-4 hidden xl:flex" />
+        <Navbar containerStyles="text-white text-base uppercase font-medium transition-all flex gap-4 hidden xl:flex" />
         {/* hide/open menu button */}
-        <button
-          onClick={() => setOpenNav(!openNav)}
-          className="text-white xl:hidden"
-        >
-          <MdMenu className="text-4xl" />
-        </button>
+        <div className="flex items-center gap-4">
+          {/* login & register */}
+          <div className="text-white flex items-center gap-4 ">
+            <button className="hover:text-accent transition-all text-base uppercase font-medium">
+              Login
+            </button>
+            <button className="hover:text-accent transition-all text-base uppercase font-medium">
+              Register
+            </button>
+          </div>
+          <button
+            onClick={() => setOpenNav(!openNav)}
+            className="text-white xl:hidden"
+          >
+            <MdMenu className="text-4xl" />
+          </button>
+        </div>
       </div>
     </header>
   );
