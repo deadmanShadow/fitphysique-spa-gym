@@ -6,7 +6,7 @@ export const Hero = () => {
       className="h-[80vh] lg:h-[912px] bg-hero bg-cover bg-center bg-no-repeat"
       id="home"
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto h-full">
         {/* slider */}
         <HeroSlider />
       </div>
