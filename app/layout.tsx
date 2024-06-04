@@ -1,4 +1,4 @@
-import { Footer } from "@/components/Footer";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import type { Metadata } from "next";
 import { Oswald, Roboto } from "next/font/google";
