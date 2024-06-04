@@ -124,7 +124,7 @@ const Footer = () => {
           <motion.div variants={footerItem}>
             <h4 className="h4 text-accent">Gallery</h4>
             {/* imgs gallery */}
-            <div className="flex flex-wrap gap-2">
+            <div className="flex mt-4 flex-wrap gap-2">
               <Link href="#">
                 <Image
                   src="/assets/img/trainers/david.jpg"
@@ -189,7 +189,7 @@ const Footer = () => {
             <p>
               Our gym introduces new HIIT classes, boosting energy and burning
               calories faster. Join now and experience the intensity of
-              high-intensity interval training
+              high-intensity interval training.
             </p>
             <form className="flex items-center">
               <input
