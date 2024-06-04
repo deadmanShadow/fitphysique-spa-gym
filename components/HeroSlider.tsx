@@ -45,6 +45,12 @@ const HeroSlider = () => {
                 containerStyles="w-[196px] h-[62px] "
               />
             </motion.div>
+            {/* swiper navbutton for mobile and tablet */}
+            <SwiperNavButtons
+              containerStyles="flex justify-center gap-1 mt-8 lg:hidden"
+              btnStyles="border border-accent text-white w-[56px] h-[56px] flex justify-center items-center hover:bg-accent transition-all duration-300"
+              iconStyles="text-2xl"
+            />
           </div>
         </div>
       </SwiperSlide>
@@ -84,12 +90,18 @@ const HeroSlider = () => {
                 containerStyles="w-[196px] h-[62px] "
               />
             </motion.div>
+            {/* swiper navbutton for mobile and tablet */}
+            <SwiperNavButtons
+              containerStyles="flex justify-center gap-1 mt-8 lg:hidden"
+              btnStyles="border border-accent text-white w-[56px] h-[56px] flex justify-center items-center hover:bg-accent transition-all duration-300"
+              iconStyles="text-2xl"
+            />
           </div>
         </div>
       </SwiperSlide>
-      {/* swiper navbutton */}
+      {/* swiper navbutton for desktop */}
       <SwiperNavButtons
-        containerStyles="absolute bottom-2 lg:bottom-0 right-8 h-[130px] w-full lg:w-[700px] z-50 flex justify-center lg:justify-start gap-1"
+        containerStyles="absolute bottom-2 lg:bottom-0 right-8 h-[130px] w-full lg:w-[700px] z-50 lg:flex justify-center lg:justify-start gap-1 hidden"
         btnStyles="border border-accent text-white w-[56px] h-[56px] flex justify-center items-center hover:bg-accent transition-all duration-300"
         iconStyles="text-2xl"
       />

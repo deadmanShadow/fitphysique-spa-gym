@@ -26,4 +26,5 @@ const SwiperNavButtons = ({
     </div>
   );
 };
+
 export default SwiperNavButtons;
