@@ -4,30 +4,21 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
-  build:
+  update-timestamps:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [22.6.0]
-
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: "npm"
+      - name: integration
+        run: echo "$(date)" >> timestamps.txt
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build the app
-        run: npm run build
+      - name: Commit and push changes
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Update timestamps"
+          git push
