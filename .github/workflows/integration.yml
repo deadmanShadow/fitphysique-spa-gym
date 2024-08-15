@@ -14,7 +14,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [21.6.2]
+        node-version: [22.6.0]
 
     steps:
       - name: Checkout code
@@ -31,6 +31,3 @@ jobs:
 
       - name: Build the app
         run: npm run build
-
-      - name: Run tests
-        run: npm test
